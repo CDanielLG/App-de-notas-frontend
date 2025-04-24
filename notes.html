@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="/frontend/frontend/CSS/notes.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <h1>Notes</h1>
+        <button id="logoutBtn" class="logout-btn" onclick="logout()">Logout</button>
+        <div class="note-form">
+            <h2>New Note</h2>
+            <form id="noteForm">
+                <label for="noteTitle" >Title of the note</label>
+                <input name="noteTitle" type="text" id="noteTitle" placeholder="Write the title of your note..." required>
+
+                <label for="noteContent">Content</label>
+                <textarea name="noteContent" id="noteContent" rows="5" placeholder="Write the content of your note..." required></textarea>
+
+                <label for="noteCategory">Category</label>
+                <input name="noteCategory" type="text" id="noteCategory" placeholder="write a category..." required>
+
+
+                <button type="submit">Save Note</button>
+
+            </form>
+            <div class="filter-section">
+                <label for="categorySelect">Filter by category</label>
+                <select id="categorySelect">
+                    <option value="all">Todas</option>
+                    <!--Here the categories will be dynamically added -->
+                </select>
+            </div>
+        </div>
+        <div class="notes-section">
+            <h2 class="toggle-btn" id="toggleArchived">Archived Notes ▼</h2>
+            <div id="archivedNotes" class="hidden">
+                <!--  Archived notes will appear here -->
+            </div>
+        </div>
+
+        <div class="notes-section">
+            <h2 class="toggle-btn" id="toggleActive">Active Notes ▼</h2>
+            <div id="activeNotes" class="hidden">
+                <!-- Active notes will appear here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="/frontend/frontend/JS/index.js" type="text/javascript"> </script>
+</body>
+
+</html>
