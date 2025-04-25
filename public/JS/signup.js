@@ -51,7 +51,7 @@ signupForm.addEventListener("submit", async (event) => {
         showSuccess(data.message || "Registration successful!");
         
         setTimeout(() => {
-            window.location.href = "/public/index.html";
+            window.location.href = "../index.html";
         }, 2000);
 
     } catch (error) {
