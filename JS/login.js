@@ -41,7 +41,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
         }
 
         localStorage.setItem('token', data.token);
-        window.location.href = "/notes.html";
+        window.location.href = "/public/notes.html";
 
     } catch (error) {
         console.error("Error en el login:", error);

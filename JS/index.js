@@ -62,7 +62,7 @@ const elements = {
 // ========================
 function logout() {
     localStorage.removeItem("token");
-    window.location.href = "index.html";
+    window.location.href = "/public/index.html";
 }
 
 
@@ -79,7 +79,7 @@ async function fetchAPI(url, options = {}) {
 
         if (response.status === 401) {
             localStorage.removeItem("token");
-            window.location.href = "index.html";
+            window.location.href = "public/index.html";
             return;
         }
 
