@@ -21,7 +21,7 @@ signupForm.addEventListener("submit", async (event) => {
     }
 
     try {
-        const response = await fetch("http://localhost:8080/api/auth/register", {
+        const response = await fetch("http://notas-aplicacion-backend.onrender.com/api/auth/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -51,7 +51,7 @@ signupForm.addEventListener("submit", async (event) => {
         showSuccess(data.message || "Registration successful!");
         
         setTimeout(() => {
-            window.location.href = "/frontend/frontend/index.html";
+            window.location.href = "/index.html";
         }, 2000);
 
     } catch (error) {

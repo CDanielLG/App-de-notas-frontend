@@ -6,12 +6,12 @@
 const token = localStorage.getItem("token");
 
 if (!token) {
-    window.location.href = "index.html";
+    window.location.href = "/index.html";
 }
 
 
 // Configuración base
-const API_BASE_URL = "http://localhost:8080/api/notes";
+const API_BASE_URL = "http://notas-aplicacion-backend.onrender.com/api/notes";
 const headers = {
     "Content-Type": "application/json",
     "Authorization": `Bearer ${token}`
@@ -256,16 +256,6 @@ async function loadCategories() {
         showAlert('Error al cargar categorías', 'error');
     }
 }
-
-
-// elements.categorySelect.addEventListener('change', function() {
-//     const selectedCategory = this.value.toLowerCase();
-//     document.querySelectorAll('.note-card').forEach(card => {
-//         const showCard = selectedCategory === 'all' || 
-//                         card.dataset.category === selectedCategory;
-//         card.style.display = showCard ? 'block' : 'none';
-//     });
-// });
 
 // ========================
 // UI Helpers

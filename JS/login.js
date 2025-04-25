@@ -7,7 +7,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     const password = document.getElementById('password').value;
 
     try {
-        const response = await fetch("http://localhost:8080/api/auth/login", {
+        const response = await fetch("http://notas-aplicacion-backend.onrender.com/api/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -41,7 +41,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
         }
 
         localStorage.setItem('token', data.token);
-        window.location.href = "/frontend/frontend/notes.html";
+        window.location.href = "/notes.html";
 
     } catch (error) {
         console.error("Error en el login:", error);
