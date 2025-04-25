@@ -11,7 +11,7 @@ if (!token) {
 
 
 // Configuración base
-const API_BASE_URL = "http://notas-aplicacion-backend.onrender.com/api/notes";
+const API_BASE_URL = "https://notas-aplicacion-backend.onrender.com/api/notes";
 const headers = {
     "Content-Type": "application/json",
     "Authorization": `Bearer ${token}`

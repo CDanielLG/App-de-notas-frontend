@@ -7,7 +7,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     const password = document.getElementById('password').value;
 
     try {
-        const response = await fetch("http://notas-aplicacion-backend.onrender.com/api/auth/login", {
+        const response = await fetch("https://notas-aplicacion-backend.onrender.com/api/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
