@@ -32,7 +32,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
         }
 
         if (!response.ok) {
-            const errorMsg = data.message || `Error ${response.status}: ${response.statusText}`;
+            const errorMsg = data.error || data.message || `Error ${response.status}: ${response.statusText}`;
             throw new Error(errorMsg);
         }
 
